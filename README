@@ -1,0 +1,22 @@
+## api
+統一由原生的php撈資料，可以統一加鎖，也不用經過laravel框架(比較快)
+
+
+## 鎖
+1. 檔案鎖
+2. 讀寫鎖
+3. 鎖(忙碌中) https://blog.csdn.net/ityang521/article/details/79702736
+
+## 設計概念
+多人維護，簡易工具包
+
+## License
+
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+Copyright (C) <2022 ~ 2022> <copyright hahaha(Chen Jie Qi)>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
