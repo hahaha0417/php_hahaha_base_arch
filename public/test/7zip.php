@@ -7,7 +7,7 @@ use hahaha\define\backend\api as backend_api;
 // use hahaha\config\table as config_table;
 
 
-require __DIR__ . "/../../project/single/single/vendor/autoload.php";
+require __DIR__ . "/../../project/backend/backend/vendor/autoload.php";
 
 // 統一寫在這，進行加鎖
 // 不容易錯亂

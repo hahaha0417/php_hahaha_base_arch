@@ -25,13 +25,20 @@ hahaha\application::instance()
 // --------------------------------------------------------------------------
 // 
 // --------------------------------------------------------------------------
+$result = [
+    "aa" => "aa",
+    "bb" => "bb",
+];
+echo json_encode($result, 
+    JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
+);
 
-$result = [];
-$function_base = function_base::Instance();
+$rrr = 0;
 
-$exe = "C:\\Program Files\\7-Zip\\7z.exe";
-$_7zip = \hahahalib\_7zip::Instance()->Initial_7zip($exe);
 
-$archive_file = "D:\\Desktop\\ttt\\xxxx.zip";
-$dir = "D:\\Desktop\\ttt\\xxxxx";
-$_7zip->Un_Archive($archive_file, $dir);
+$rrr = 0;
+
+
+$rrr = 0;
+
+
