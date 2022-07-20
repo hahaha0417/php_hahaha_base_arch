@@ -8,7 +8,7 @@ namespace hahaha\define;
 use hahaha\define\accounts as accounts;
 use hahaha\define\accounts as define_accounts;
 
-*/
+*/ 
 
 class accounts
 {
