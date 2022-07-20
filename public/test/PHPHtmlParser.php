@@ -33,14 +33,24 @@ hahaha\application::instance()
 //     JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
 // );
 
+// mihaeu/html-formatter
+// composer require mihaeu/html-formatter
+
+// paquettg/php-html-parser
+// composer require paquettg/php-html-parser
+
+
+
+
+
  
 $dom = new Dom;
 $dom = $dom->loadStr('<div class="all"><p>Hey bro, <a class="aa" href="google.com">click here</a><br /> :)</p></div>');
 $a = $dom->find('.aa')[0];
 // echo $a->text; // "click here"
-echo $a->outerHtml;
+// echo $a->outerHtml;
 $rrr = 0;
-
+echo \Mihaeu\HtmlFormatter::format($a->outerHtml); 
 
 $rrr = 0;
 

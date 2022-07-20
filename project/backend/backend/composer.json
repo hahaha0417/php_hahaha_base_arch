@@ -10,6 +10,7 @@
         "laravel/framework": "^9.11",
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
+        "mihaeu/html-formatter": "^1.0",
         "paquettg/php-html-parser": "^3.1"
     },
     "require-dev": {
