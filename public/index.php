@@ -25,6 +25,18 @@ else if(mb_strpos($_SERVER['REQUEST_URI'], "/backend", 0) === 0)
     // 後台
     require __DIR__ . "/../project/backend/backend/public/index.php";
 }
+// --------------------------------------------------------------- 
+else if(mb_strpos($_SERVER['REQUEST_URI'], "/doctrine2", 0) === 0)
+{
+    // 後台
+    require __DIR__ . "/../project/doctrine2/doctrine2/public/index.php";
+}
+else if(mb_strpos($_SERVER['REQUEST_URI'], "/doctrine3", 0) === 0)
+{
+    // 後台
+    require __DIR__ . "/../project/doctrine3/doctrine3/public/index.php";
+}
+// --------------------------------------------------------------- 
 else if(mb_strpos($_SERVER['REQUEST_URI'], "/api", 0) === 0)
 {
     // api

@@ -1,0 +1,44 @@
+{
+    "name": "hahaha/hahaha",
+    "type": "project",
+    "description": "Doctrine 2.",
+    "keywords": ["doctrine 2, hahahalib"],
+    "license": "MIT",
+    "require": {
+        "php": "^8.0.2",
+        "doctrine/orm": "^2.11.0",
+        "doctrine/dbal": "^3.2",
+        "doctrine/annotations": "1.13.2",
+        "symfony/yaml": "^5.4",
+        "symfony/cache": "^5.4"
+    },
+    "autoload": {
+        "classmap": [
+            "../../../env",
+            "../../../library",
+            "../../../code",
+            "../code"
+            
+        ],
+        "psr-0": {"": "src/"}
+    },
+    "autoload-dev": {
+        "psr-4": {
+        }
+    },
+    "scripts": {
+        
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
