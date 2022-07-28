@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'bc0bc0f3ff30d91f726f0616efad4b5098a3631a',
+        'reference' => '80bd0001249ce113b5f8cd962c91ea496cd0c188',
         'name' => 'hahaha/hahaha',
         'dev' => false,
     ),
@@ -65,12 +65,12 @@
             'dev_requirement' => false,
         ),
         'doctrine/event-manager' => array(
-            'pretty_version' => '1.1.1',
-            'version' => '1.1.1.0',
+            'pretty_version' => '1.1.2',
+            'version' => '1.1.2.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../doctrine/event-manager',
             'aliases' => array(),
-            'reference' => '41370af6a30faa9dc0368c4a6814d596e81aba7f',
+            'reference' => 'eb2ecf80e3093e8f3c2769ac838e27d8ede8e683',
             'dev_requirement' => false,
         ),
         'doctrine/inflector' => array(
@@ -124,7 +124,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'bc0bc0f3ff30d91f726f0616efad4b5098a3631a',
+            'reference' => '80bd0001249ce113b5f8cd962c91ea496cd0c188',
             'dev_requirement' => false,
         ),
         'psr/cache' => array(

@@ -179,6 +179,7 @@ class ComposerStaticInit6bc04d8e4318f075f6939b5a1928743e
     );
 
     public static $classMap = array (
+        'Accounts' => __DIR__ . '/../..' . '/models/Accounts.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Doctrine\\Common\\Annotations\\Annotation' => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations/Annotation.php',
@@ -1049,9 +1050,16 @@ class ComposerStaticInit6bc04d8e4318f075f6939b5a1928743e
         'Doctrine\\Persistence\\Reflection\\TypedNoDefaultReflectionProperty' => __DIR__ . '/..' . '/doctrine/persistence/src/Persistence/Reflection/TypedNoDefaultReflectionProperty.php',
         'Doctrine\\Persistence\\Reflection\\TypedNoDefaultReflectionPropertyBase' => __DIR__ . '/..' . '/doctrine/persistence/src/Persistence/Reflection/TypedNoDefaultReflectionPropertyBase.php',
         'Doctrine\\Persistence\\Reflection\\TypedNoDefaultRuntimePublicReflectionProperty' => __DIR__ . '/..' . '/doctrine/persistence/src/Persistence/Reflection/TypedNoDefaultRuntimePublicReflectionProperty.php',
+        'Help' => __DIR__ . '/../..' . '/models/Help.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
+        'Migrations' => __DIR__ . '/../..' . '/models/Migrations.php',
+        'MyApp\\Entity\\Repository\\UserRepository' => __DIR__ . '/../..' . '/repository/MyApp/Entity/Repository/UserRepository.php',
         'Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
+        'PersonalAccessTokens' => __DIR__ . '/../..' . '/models/PersonalAccessTokens.php',
         'PhpToken' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/PhpToken.php',
+        'Products' => __DIR__ . '/../..' . '/models/Products.php',
+        'ProductsSignUp' => __DIR__ . '/../..' . '/models/ProductsSignUp.php',
+        'Projects' => __DIR__ . '/../..' . '/models/Projects.php',
         'Psr\\Cache\\CacheException' => __DIR__ . '/..' . '/psr/cache/src/CacheException.php',
         'Psr\\Cache\\CacheItemInterface' => __DIR__ . '/..' . '/psr/cache/src/CacheItemInterface.php',
         'Psr\\Cache\\CacheItemPoolInterface' => __DIR__ . '/..' . '/psr/cache/src/CacheItemPoolInterface.php',
@@ -1294,6 +1302,7 @@ class ComposerStaticInit6bc04d8e4318f075f6939b5a1928743e
         'hahaha\\config\\Mysql_Dump' => __DIR__ . '/../..' . '/../../../library/hahahalib_very_hard_license/backup/mysqldump.php',
         'hahaha\\config\\application' => __DIR__ . '/../..' . '/../../../code/config/application.php',
         'hahaha\\config\\database' => __DIR__ . '/../..' . '/../../../code/config/database.php',
+        'hahaha\\config\\orm_doctrine' => __DIR__ . '/../..' . '/../../../code/config/orm_doctrine.php',
         'hahaha\\config\\product\\application' => __DIR__ . '/../..' . '/../../../code/config/products/item.php',
         'hahaha\\define\\_help' => __DIR__ . '/../..' . '/../../../code/generate/define/database/table/_help.php',
         'hahaha\\define\\accounts' => __DIR__ . '/../..' . '/../../../code/generate/define/database/table/accounts.php',
@@ -1314,6 +1323,7 @@ class ComposerStaticInit6bc04d8e4318f075f6939b5a1928743e
         'hahahalib\\generate_const_database' => __DIR__ . '/../..' . '/../../../library/hahahalib/generate/php/class/generate_const_database.php',
         'hahahalib\\generate_const_table' => __DIR__ . '/../..' . '/../../../library/hahahalib/generate/php/class/generate_const_table.php',
         'hahahalib\\instance' => __DIR__ . '/../..' . '/../../../library/hahahalib/trait/instance.php',
+        'hahahalib\\orm_doctrine' => __DIR__ . '/../..' . '/../../../library/hahahalib/orm/orm_doctrine.php',
         'hahahalib\\pdo' => __DIR__ . '/../..' . '/../../../library/hahahalib/pdo/pdo.php',
     );
 

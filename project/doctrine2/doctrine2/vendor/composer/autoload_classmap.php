@@ -6,6 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Accounts' => $baseDir . '/models/Accounts.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Doctrine\\Common\\Annotations\\Annotation' => $vendorDir . '/doctrine/annotations/lib/Doctrine/Common/Annotations/Annotation.php',
@@ -876,9 +877,16 @@ return array(
     'Doctrine\\Persistence\\Reflection\\TypedNoDefaultReflectionProperty' => $vendorDir . '/doctrine/persistence/src/Persistence/Reflection/TypedNoDefaultReflectionProperty.php',
     'Doctrine\\Persistence\\Reflection\\TypedNoDefaultReflectionPropertyBase' => $vendorDir . '/doctrine/persistence/src/Persistence/Reflection/TypedNoDefaultReflectionPropertyBase.php',
     'Doctrine\\Persistence\\Reflection\\TypedNoDefaultRuntimePublicReflectionProperty' => $vendorDir . '/doctrine/persistence/src/Persistence/Reflection/TypedNoDefaultRuntimePublicReflectionProperty.php',
+    'Help' => $baseDir . '/models/Help.php',
     'JsonException' => $vendorDir . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
+    'Migrations' => $baseDir . '/models/Migrations.php',
+    'MyApp\\Entity\\Repository\\UserRepository' => $baseDir . '/repository/MyApp/Entity/Repository/UserRepository.php',
     'Normalizer' => $vendorDir . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
+    'PersonalAccessTokens' => $baseDir . '/models/PersonalAccessTokens.php',
     'PhpToken' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/PhpToken.php',
+    'Products' => $baseDir . '/models/Products.php',
+    'ProductsSignUp' => $baseDir . '/models/ProductsSignUp.php',
+    'Projects' => $baseDir . '/models/Projects.php',
     'Psr\\Cache\\CacheException' => $vendorDir . '/psr/cache/src/CacheException.php',
     'Psr\\Cache\\CacheItemInterface' => $vendorDir . '/psr/cache/src/CacheItemInterface.php',
     'Psr\\Cache\\CacheItemPoolInterface' => $vendorDir . '/psr/cache/src/CacheItemPoolInterface.php',
@@ -1121,6 +1129,7 @@ return array(
     'hahaha\\config\\Mysql_Dump' => $baseDir . '/../../../library/hahahalib_very_hard_license/backup/mysqldump.php',
     'hahaha\\config\\application' => $baseDir . '/../../../code/config/application.php',
     'hahaha\\config\\database' => $baseDir . '/../../../code/config/database.php',
+    'hahaha\\config\\orm_doctrine' => $baseDir . '/../../../code/config/orm_doctrine.php',
     'hahaha\\config\\product\\application' => $baseDir . '/../../../code/config/products/item.php',
     'hahaha\\define\\_help' => $baseDir . '/../../../code/generate/define/database/table/_help.php',
     'hahaha\\define\\accounts' => $baseDir . '/../../../code/generate/define/database/table/accounts.php',
@@ -1141,5 +1150,6 @@ return array(
     'hahahalib\\generate_const_database' => $baseDir . '/../../../library/hahahalib/generate/php/class/generate_const_database.php',
     'hahahalib\\generate_const_table' => $baseDir . '/../../../library/hahahalib/generate/php/class/generate_const_table.php',
     'hahahalib\\instance' => $baseDir . '/../../../library/hahahalib/trait/instance.php',
+    'hahahalib\\orm_doctrine' => $baseDir . '/../../../library/hahahalib/orm/orm_doctrine.php',
     'hahahalib\\pdo' => $baseDir . '/../../../library/hahahalib/pdo/pdo.php',
 );

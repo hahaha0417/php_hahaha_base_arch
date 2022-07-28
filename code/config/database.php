@@ -22,7 +22,7 @@ class database
     public $user = null;
     public $password = null;
     public $charset = null;
-    
+    public $path = null;
 
     public function initial()
     {
