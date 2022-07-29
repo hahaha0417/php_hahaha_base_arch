@@ -35,16 +35,16 @@ class block_header
 
                     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                         <li>
-                            <a href="#" class="nav-link px-2 text-secondary">
+                            <a href="/backend" class="nav-link px-2 text-secondary">
                                 首頁
                             </a>
                         </li>
-                        <!-- <li>
-                            <a href="#" class="nav-link px-2 text-white">
-                                會員
+                        <li>
+                            <a href="/backend/chart" class="nav-link px-2 text-white">
+                                圖表
                             </a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="#" class="nav-link px-2 text-white">
                                 產品
                             </a>
