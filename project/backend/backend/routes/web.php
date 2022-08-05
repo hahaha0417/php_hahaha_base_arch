@@ -41,3 +41,31 @@ Route::prefix('backend')
     // -----------------------------------------------------
     Route::get('/chart', 'ChartController@chart');
 });
+
+// Route::prefix('backend')
+//     ->namespace('\App\Http\Controllers\Backend')
+//     ->middleware([
+//         // '',
+//     ])->group(function () {
+
+//     // -----------------------------------------------------
+//     Route::get('/fsm', 'FsmController@fsm');
+// });
+
+
+Route::prefix('backend')
+    ->namespace('\App\Http\Controllers\Backend')
+    ->middleware([
+        // '',
+    ])->group(function () {
+
+    // -----------------------------------------------------
+    Route::get('/chat', 'ChatController@chat');
+});
+
+
+
+
+
+
+

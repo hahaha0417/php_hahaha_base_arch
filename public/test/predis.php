@@ -25,43 +25,16 @@ require __DIR__ . "/../../project/backend/backend/vendor/autoload.php";
 // --------------------------------------------------------------------------
 // 
 // -------------------------------------------------------------------------- 
-$curl = \hahahalib\curl::Instance()->Initial();
-$data = [];
-$options = [];
-$result = $curl->Post("https://www.php.net/manual/en/function.curl-exec.php", $data, $options);
-
+$server  =  [
+    'host'      =>  '127.0.0.1' ,
+    'port'      =>  6379 ,
+    'database'  =>  1
+];
+$client = new \Predis\Client($server);
+$client->set('foo', 'bar');
+$value = $client->get('foo');
+echo $value;
 $rrr = 0;
 
-// $result = [
-//     "aa" => "aa",
-//     "bb" => "bb",
-// ];
-// echo json_encode($result, 
-//     JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
-// );
-
-// mihaeu/html-formatter
-// composer require mihaeu/html-formatter
-
-// paquettg/php-html-parser
-// composer require paquettg/php-html-parser
-
-
-
-
-
- 
-$dom = new Dom;
-$dom = $dom->loadStr('<div class="all"><p>Hey bro, <a class="aa" href="google.com">click here</a><br /> :)</p></div>');
-$a = $dom->find('.aa')[0];
-// echo $a->text; // "click here"
-// echo $a->outerHtml;
-$rrr = 0;
-echo \Mihaeu\HtmlFormatter::format($a->outerHtml); 
-
-$rrr = 0;
-
-
-$rrr = 0;
 
 

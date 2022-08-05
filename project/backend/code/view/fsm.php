@@ -10,12 +10,12 @@ use hahaha\view\table\base\index as base_index;
 
 /*
 
-use hahaha\view\chart as chart;
-use hahaha\view\chart as view_chart;
+use hahaha\view\fsm as fsm;
+use hahaha\view\fsm as view_fsm;
 
 */
 
-class chart extends base_index
+class fsm extends base_index
 {
     use \hahaha\instance;
 

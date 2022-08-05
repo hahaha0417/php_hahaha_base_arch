@@ -11,7 +11,9 @@
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
         "mihaeu/html-formatter": "^1.0",
-        "paquettg/php-html-parser": "^3.1"
+        "mongodb/mongodb": "^1.12",
+        "paquettg/php-html-parser": "^3.1",
+        "predis/predis": "^2.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -31,7 +33,8 @@
             "../../../env",
             "../../../library",
             "../../../code",
-            "../code"
+            "../code",
+            "app/Jobs/define"
         ]
     },
     "autoload-dev": {

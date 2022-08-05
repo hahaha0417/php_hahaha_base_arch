@@ -34,8 +34,9 @@ class block_header
                     </a>
 
                     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                        
                         <li>
-                            <a href="/backend" class="nav-link px-2 text-secondary">
+                            <a href="/backend" class="nav-link px-2 text-white">
                                 首頁
                             </a>
                         </li>
@@ -45,16 +46,16 @@ class block_header
                             </a>
                         </li>
                         <!-- <li>
-                            <a href="#" class="nav-link px-2 text-white">
-                                產品
+                            <a href="/backend/fsm" class="nav-link px-2 text-white">
+                                有限狀態機
                             </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link px-2 text-white">
-                                報名
+                        </li> -->
+                        <!-- <li>
+                            <a href="/backend/chat" class="nav-link px-2 text-white">
+                                聊天室
                             </a>
-                        </li>
-                        <li>
+                        </li>  -->
+                        <!--<li>
                             <a href="#" class="nav-link px-2 text-white">
                                 備份
                             </a>
