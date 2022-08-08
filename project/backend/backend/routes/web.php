@@ -60,7 +60,7 @@ Route::prefix('backend')
     ])->group(function () {
 
     // -----------------------------------------------------
-    Route::get('/chat', 'ChatController@chat');
+    // Route::get('/chat', 'ChatController@chat');
 });
 
 

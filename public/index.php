@@ -42,6 +42,11 @@ else if(mb_strpos($_SERVER['REQUEST_URI'], "/api", 0) === 0)
     // api
     require __DIR__ . "/../project/api/api/public/api.php";
 }
+else if(mb_strpos($_SERVER['REQUEST_URI'], "/demo", 0) === 0)
+{
+    // laravel demo
+    require __DIR__ . "/../project/demo/public/index.php";
+}
 else
 {
     // 前台
