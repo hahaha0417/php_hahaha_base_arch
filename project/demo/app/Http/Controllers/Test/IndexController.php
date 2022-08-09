@@ -13,7 +13,8 @@ use LaravelDoctrine\ORM\Facades\Doctrine;
 use Doctrine\ORM\Query\ResultSetMapping;
 
 use Doctrine\ORM\EntityManagerInterface;
-
+use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 
 
 class IndexController extends BaseController
@@ -60,9 +61,26 @@ class IndexController extends BaseController
         // --------------------------------------------------
 
         // --------------------------------------------------
+        // $data = [];
+        // event(new \App\Events\PostCreated($data));
 
-        return "444";
+        // abort(500);
+        // --------------------------------------------------
 
+
+        // --------------------------------------------------
+        // Collection::macro('toUpper', function () {
+        //     return $this->map(function ($value) {
+        //         return Str::upper($value);
+        //     });
+        // });
+
+        // $collection = collect(['first', 'second']);
+        // $upper = $collection->toUpper();
+        // return $upper;
+        // --------------------------------------------------
+
+        return 444;
     }
 
     public function index_view()

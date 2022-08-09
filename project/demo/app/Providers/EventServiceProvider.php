@@ -13,6 +13,7 @@ class EventServiceProvider extends ServiceProvider
      * The event to listener mappings for the application.
      *
      * @var array<class-string, array<int, class-string>>
+     * https://learnku.com/docs/laravel/9.x/events/12228 *
      */
     protected $listen = [
         Registered::class => [
@@ -21,7 +22,7 @@ class EventServiceProvider extends ServiceProvider
         \App\Events\PostCreated::class => [
             \App\Listeners\NotifyUser::class,
             // 放兩個都會執行
-            \App\Listeners\NotifyUser1::class,
+            \App\Listeners\NotifyUser2::class,
         ],
     ];
 
@@ -46,6 +47,24 @@ class EventServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        // Event::listen(
+        //     PodcastProcessed::class,
+        //     [SendPodcastNotification::class, 'handle']
+        // );
+
+        // Event::listen(function (PodcastProcessed $event) {
+        //     //
+        // });
+
+        // Event::listen(queueable(function (PodcastProcessed $event) {
+        //     //
+        // }));
+
+        // Event::listen(queueable(function (PodcastProcessed $event) {
+        //     //
+        // })->catch(function (PodcastProcessed $event, Throwable $e) {
+        //     // 队列监听器
+        // }));
     }
 
     /**

@@ -3,12 +3,13 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use App\Services\Transistor;
 use App\Services\PodcastParser;
 use App\Contracts\EventPusher;
 use App\Services\RedisEventPusher;
-
-
+use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
+use App\Services\Transistor;
+use Illuminate\Support\Facades\App;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -32,6 +33,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        // Collection::macro('toUpper', function () {
+        //     return $this->map(function ($value) {
+        //         return Str::upper($value);
+        //     });
+        // });
+
         //
         // $collection = collect(['taylor', 'abigail', null])->map(function ($name) {
         //     return strtoupper($name);
@@ -48,7 +55,9 @@ class AppServiceProvider extends ServiceProvider
         // 如果您希望与服务提供商外部的容器进行交互
         // App::bind(Transistor::class, function ($app) {
         //     // ...
+        //     return new \stdClass;
         // });
+        // $rrr = app(Transistor::class);
 
         // // 单例的绑定
         // $this->app->singleton(Transistor::class, function ($app) {

@@ -6,7 +6,7 @@ use App\Events\PostCreated;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
-class NotifyUser1
+class NotifyUser2
 {
     /**
      * Create the event listener.
@@ -27,6 +27,6 @@ class NotifyUser1
     public function handle(PostCreated $event)
     {
         //
-        echo 444;
+        echo 333;
     }
 }

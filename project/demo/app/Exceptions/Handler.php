@@ -46,5 +46,13 @@ class Handler extends ExceptionHandler
         $this->reportable(function (Throwable $e) {
             //
         });
+
+        $this->reportable(function (InvalidOrderException $e) {
+            $rrr = 0;
+        })->stop();
     }
+
+
+
+
 }
