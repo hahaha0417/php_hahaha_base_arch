@@ -15,7 +15,7 @@ use Doctrine\ORM\Query\ResultSetMapping;
 use Doctrine\ORM\EntityManagerInterface;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
-
+use Illuminate\Support\Facades\Http;
 
 class IndexController extends BaseController
 {
@@ -34,6 +34,9 @@ class IndexController extends BaseController
         // $query = EntityManager::createNativeQuery($sql, $rsm);
         // // $em = app('em')->createNativeQuery($sql, $rsm);
 
+        // ---------------------------------------------------------------
+        // $response = Http::get('http://example.com');
+        // ---------------------------------------------------------------
 
         // --------------------------------------------------
         // 這兩者相同
