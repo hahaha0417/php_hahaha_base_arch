@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Test\IndexController;
-
+use App\Http\Controllers\Orm\IndexController as Orm_IndexController;
 use App\Http\Controllers\MailController;
 
 /*
@@ -52,6 +52,11 @@ Route::group(
         Route::get('/test_layout', [IndexController::class, 'index_layout']);
         //
         Route::get('send-mail', [MailController::class, 'index']);
+        //
+        Route::get('orm', [Orm_IndexController::class, 'index']);
+
+
+
     }
 );
 

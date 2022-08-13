@@ -27,7 +27,10 @@
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         },
-        "classmap": ["models",
+        "classmap": ["../../env",
+            "../../library",
+            "../../code",
+            "models",
             "repositories",
             "app/Jobs/define"
         ]
