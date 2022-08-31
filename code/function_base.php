@@ -37,7 +37,7 @@ class function_base
 	*/
 	public function Js($js)
 	{
-		return "<script type=\"text/javascript\" src=\"{$js}\"\>\</script>";
+		return "<script type=\"text/javascript\" src=\"{$js}\"></script>";
     }
 
 	/*
