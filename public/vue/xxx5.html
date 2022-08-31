@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>This is a title</title>
+</head>
+
+<body>
+
+	<script type="importmap">
+		// https://beginor.github.io/2021/08/16/using-es-modules-in-borwser-with-importmaps.html
+		// 浏览器中只支持相对路径或者绝对路径下的 ES 模块 (./, ../, /, http://, https://) ， 
+		// 同时也受服务器跨域请求策略、 HTTPS 策略的约束。
+		
+	  {
+		"imports": {
+		  "vue": "./vue/dist/vue.esm-browser.js"
+		}
+	  }
+	</script> 
+	<div id="app">
+		<!-- 
+	  <div v-bind:id="dynamicId"></div>
+	   -->
+		<div :id="dynamicId"></div>
+		<p>Using text interpolation: {{ rawHtml }}</p>
+		<p>Using v-html directive: <span v-html="rawHtml"></span></p>
+		<div v-bind="objectOfAttrs"> </div>
+		<button :disabled="isButtonDisabled">Button</button>
+		<!-- 不能用 -->
+		<!-- <div v-bind="objectOfAttrs"> {{ if (ok) { return "ddd" } }}</div> -->
+		<p v-if="seen">Now you see me</p>
+		<a v-on:click="doSomething"> ... </a>
+		<a v-on:click="doSomething2(66, $event)"> ... </a>
+		<!-- shorthand -->
+		<a @click="doSomething"> ... </a>
+		<a v-on:[eventName]="doSomething"> ... </a>
+
+		<!-- shorthand -->
+		<a @[eventName]="doSomething"> ... </a>
+	</div>
+	<!-- index.html -->
+	<script type="module">
+		import { createApp } from 'vue'
+		import { nextTick } from 'vue'
+		
+		// 在 Vue 範本中，JavaScript 運算式可以用於以下位置：
+
+		// 內部文字插值（小鬍子）
+		// 在任何 Vue 指令的屬性值中（以 開頭的特殊屬性v-)
+		// const app = createApp({
+		//   data() {
+		// 	return {
+		// 		dynamicId:"ddd",
+		// 		objectOfAttrs: {
+		// 			id: 'container',
+		// 			class: 'wrapper'
+		// 		},
+		// 		// 變大寫，HTML
+		// 		rawHtml:"<h1>fffffffffffs</h1>",
+		// 		isButtonDisabled:"false",
+		// 		seen:false,
+		// 		// doSomething: function(){alert(333);},
+		// 		eventName: "click"
+		// 	}
+		//   },
+		//   methods: {
+		// 	doSomething: function(event){console.log(333);},
+		// 	doSomething2: function(a, event){console.log(a, event);}
+
+		//   	}
+		// })
+		// app.mount('#app')
+
+		// const app = createApp({
+		// 	data() {
+		// 		return {
+		// 			someObject: {}
+		// 		}
+		// 	},
+		// 	mounted() {
+		// 		const newObject = {}
+		// 		this.someObject = newObject
+
+		// 		console.log(newObject === this.someObject) // false
+		// 	}
+		// })
+		// app.mount('#app')
+
+		// const app = createApp({
+		// 	data() {
+		// 		return {
+		// 			count: 0
+		// 		}
+		// 	},
+		// 	methods: {
+		// 		increment() {
+		// 			this.count++
+		// 		}
+		// 	},
+		// 	mounted() {
+		// 		// methods can be called in lifecycle hooks, or other methods!
+		// 		this.increment()
+		// 	}
+		// })
+		// app.mount('#app')
+
+		// const app = createApp({
+		// 	data() {
+		// 		return {
+		// 			count: 0
+		// 		}
+		// 	},
+		// 	methods: {
+		// 		increment() {
+		// 			this.count++
+		// 			alert(444);
+		// 			nextTick(() => {
+		// 				// access updated DOM
+		// 			})
+		// 		}
+		// 	}
+		// })
+		// // app.increment()
+		// app.mount('#app')
+		// console.log(app);
+
+		const app = createApp({
+			data() {
+				return {
+					count: 0
+				}
+			},
+			methods: {
+				increment() {
+					this.count++
+					alert(444);
+					nextTick(() => {
+						// access updated DOM
+					})
+				}
+			}
+		})
+		// app.increment()
+		app.mount('#app')
+		console.log(app);
+	</script>
+</body>
+
+</html>

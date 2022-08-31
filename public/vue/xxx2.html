@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>This is a title</title>
+  </head>
+  <body>
+	
+    <script type="importmap">
+		// https://beginor.github.io/2021/08/16/using-es-modules-in-borwser-with-importmaps.html
+		// 浏览器中只支持相对路径或者绝对路径下的 ES 模块 (./, ../, /, http://, https://) ， 
+		// 同时也受服务器跨域请求策略、 HTTPS 策略的约束。
+	  {
+		"imports": {
+		  "vue": "./vue/dist/vue.esm-browser.js"
+		}
+	  }
+	</script>
+
+	<div id="app">{{ message }}</div>
+
+	<script type="module">
+	  import { createApp } from 'vue'
+
+	  createApp({
+		data() {
+		  return {
+			message: 'Hello Vue!'
+		  }
+		}
+	  }).mount('#app')
+	</script>
+  </body>
+</html>
