@@ -17,6 +17,7 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Http;
 use App\Models\accounts;
+use Illuminate\Support\Facades\DB;
 
 class IndexController extends BaseController
 {
@@ -29,7 +30,9 @@ class IndexController extends BaseController
     //
     public function index()
     {
+        // DB::enableQueryLog();
         // $rrr = accounts::all();
+        // dd(DB::getQueryLog());
         // foreach ($rrr as $flight) {
         //     echo $flight->name;
         // }
@@ -82,6 +85,13 @@ class IndexController extends BaseController
         // ->lazyById(200, $column = 'id')
         // ->each->update(['departed' => false]);
 
+        // DB::enableQueryLog();
+        // $rrr = accounts::lazy();
+        // foreach ($rrr as $flight) {
+        //         // TODO
+        //         $flight->toArray();
+        //     }
+        // dd(DB::getQueryLog());
 
         // foreach (Flight::where('destination', 'Zurich')->cursor() as $flight) {
         //     //
