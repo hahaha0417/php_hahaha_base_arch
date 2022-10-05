@@ -5,6 +5,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\Test\IndexController;
 use App\Http\Controllers\Orm\IndexController as Orm_IndexController;
 use App\Http\Controllers\MailController;
+use App\Http\Controllers\Str\IndexController as Str_IndexController;
+use App\Http\Controllers\Arr\IndexController as Arr_IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,7 +56,10 @@ Route::group(
         Route::get('send-mail', [MailController::class, 'index']);
         //
         Route::get('orm', [Orm_IndexController::class, 'index']);
-
+        //
+        Route::get('str', [Str_IndexController::class, 'index']);
+        //
+        Route::get('arr', [Arr_IndexController::class, 'index']);
 
 
     }

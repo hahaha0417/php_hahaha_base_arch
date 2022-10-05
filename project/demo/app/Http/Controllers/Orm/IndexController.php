@@ -14,7 +14,7 @@ use Doctrine\ORM\Query\ResultSetMapping;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Str;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Http;
 use App\Models\accounts;
 use Illuminate\Support\Facades\DB;
