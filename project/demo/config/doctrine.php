@@ -12,7 +12,7 @@ return [
     | paths setting to the appropriate path and replace App namespace
     | by your own namespace.
     |
-    | Available meta drivers: fluent|annotations|yaml|simplified_yaml|xml|simplified_xml|config|static_php|php
+    | Available meta drivers: attributes|xml|simplified_xml|static_php|php
     |
     | Available connections: mysql|oracle|pgsql|sqlite|sqlsrv
     | (Connections can be configured in the database config)
@@ -27,18 +27,20 @@ return [
     'managers'                   => [
         'default' => [
             'dev'           => env('APP_DEBUG', false),
-            'meta'          => env('DOCTRINE_METADATA', 'annotations'),
+            'meta'          => env('DOCTRINE_METADATA', 'attributes'),
             'connection'    => env('DB_CONNECTION', 'mysql'),
-            'namespaces'    => [],
             'paths'         => [
                 base_path('app/Entities')
             ],
+
             'repository'    => Doctrine\ORM\EntityRepository::class,
+
             'proxies'       => [
-                'namespace'     => false,
+                'namespace'     => 'DoctrineProxies',
                 'path'          => storage_path('proxies'),
                 'auto_generate' => env('DOCTRINE_PROXY_AUTOGENERATE', false)
             ],
+
             /*
             |--------------------------------------------------------------------------
             | Doctrine events
@@ -52,7 +54,9 @@ return [
                 'listeners'   => [],
                 'subscribers' => []
             ],
+
             'filters'       => [],
+
             /*
             |--------------------------------------------------------------------------
             | Doctrine mapping types
@@ -77,6 +81,14 @@ return [
             */
             'mapping_types' => [
                 //'enum' => 'string'
+            ],
+
+            /**
+             * References:
+             * https://www.doctrine-project.org/projects/doctrine-dbal/en/current/reference/architecture.html#middlewares
+             */
+            'middlewares' => [
+                // Doctrine\DBAL\Logging\Middleware::class
             ]
         ]
     ],
@@ -92,7 +104,6 @@ return [
     |
     */
     'extensions'                 => [
-        //LaravelDoctrine\ORM\Extensions\TablePrefix\TablePrefixExtension::class,
         //LaravelDoctrine\Extensions\Timestamps\TimestampableExtension::class,
         //LaravelDoctrine\Extensions\SoftDeletes\SoftDeleteableExtension::class,
         //LaravelDoctrine\Extensions\Sluggable\SluggableExtension::class,
@@ -141,26 +152,13 @@ return [
     ],
     /*
     |--------------------------------------------------------------------------
-    | Enable query logging with laravel file logging,
-    | debugbar, clockwork or an own implementation.
-    | Setting it to false, will disable logging
-    |
-    | Available:
-    | - LaravelDoctrine\ORM\Loggers\LaravelDebugbarLogger
-    | - LaravelDoctrine\ORM\Loggers\ClockworkLogger
-    | - LaravelDoctrine\ORM\Loggers\FileLogger
-    |--------------------------------------------------------------------------
-    */
-    'logger'                     => env('DOCTRINE_LOGGER', false),
-    /*
-    |--------------------------------------------------------------------------
     | Cache
     |--------------------------------------------------------------------------
     |
     | Configure meta-data, query and result caching here.
     | Optionally you can enable second level caching.
     |
-    | Available: apc|array|file|illuminate|memcached|php_file|redis|void
+    | Available: apc|array|file|illuminate|memcached|php_file|redis
     |
     */
     'cache' => [
@@ -169,15 +167,15 @@ return [
         'namespace'        => null,
         'metadata'         => [
             'driver'       => env('DOCTRINE_METADATA_CACHE', env('DOCTRINE_CACHE', 'array')),
-            'namespace'    => null,
+            'namespace'    => 'metadata',
         ],
         'query'            => [
             'driver'       => env('DOCTRINE_QUERY_CACHE', env('DOCTRINE_CACHE', 'array')),
-            'namespace'    => null,
+            'namespace'    => 'query',
         ],
         'result'           => [
             'driver'       => env('DOCTRINE_RESULT_CACHE', env('DOCTRINE_CACHE', 'array')),
-            'namespace'    => null,
+            'namespace'    => 'result',
         ],
     ],
     /*

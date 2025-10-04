@@ -46,7 +46,9 @@ class layout
     <body>
         <!-- --------------------------------- -->
         <?php $this->view_begin();?>
-        <?php $content->view_begin();?>
+        <?php 
+            $content->view_begin();
+        ?>
         <!-- --------------------------------- -->
         <?php $this->view_design();?>
         <?php $content->view_design();?>

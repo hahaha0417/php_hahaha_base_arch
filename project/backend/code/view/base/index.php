@@ -17,7 +17,7 @@ use hahaha\view\table\base\index as table_base_index;
 /*
 layout作法，多時才必須這樣寫
 */
-class index 
+class index extends \hahaha\view\table\base\base
 {
     use \hahaha\instance;
 
@@ -26,7 +26,7 @@ class index
     // ----------------------------------------- 
     public function view()
     {
-        view_layout::instance()->view(index::instance());
+        view_layout::instance()->view($this);
 
          
     }

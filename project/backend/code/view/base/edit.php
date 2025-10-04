@@ -16,16 +16,16 @@ use hahaha\view\table\base\edit as table_base_edit;
 /*
 layout作法，多時才必須這樣寫
 */
-class edit
+class edit extends \hahaha\view\table\base\base
 {
-    use \hahaha\instance;
+  
 
     // ----------------------------------------- 
     //  base
     // ----------------------------------------- 
     public function view()
     {
-        view_layout::instance()->view(edit::instance());
+        view_layout::instance()->view($this);
 
          
     }
