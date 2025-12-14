@@ -6,6 +6,7 @@ use App\Events\PostCreated;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
+
 class NotifyUser
 {
     /**
@@ -26,6 +27,7 @@ class NotifyUser
      */
     public function handle(PostCreated $event)
     {
+        // if (($event->meta['target'] ?? null) !== 'notify_user') return;
         //
         echo 444;
     }

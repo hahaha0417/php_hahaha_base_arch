@@ -16,6 +16,9 @@ use Doctrine\ORM\EntityManagerInterface;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Http;
+use App\Events\PostCreated;
+use App\Listeners\NotifyUser;
+use Illuminate\Support\Facades\Event;
 
 class IndexController extends BaseController
 {
@@ -64,10 +67,11 @@ class IndexController extends BaseController
         // --------------------------------------------------
 
         // --------------------------------------------------
-        // $data = [];
-        // event(new \App\Events\PostCreated($data));
+        $data = [];
 
-        // abort(500);
+        event(new \App\Events\PostCreated($data));
+
+        abort(500);
         // --------------------------------------------------
 
 
